@@ -37,7 +37,7 @@ namespace console_library3.Services
       editBook.Id = original.Id;
       editBook.Title = editBook.Title != null ? editBook.Title : original.Title;
       editBook.Author = editBook.Author != null ? editBook.Author : original.Author;
-      editBook.Available = editBook.Available != true ? editBook.Available : !editBook.Available;
+      editBook.Available = editBook.Available != original.Available ? editBook.Available : original.Available;
       FakeDb.Books.Remove(original);
       FakeDb.Books.Add(editBook);
       return editBook;

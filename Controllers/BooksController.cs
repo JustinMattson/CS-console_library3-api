@@ -86,12 +86,12 @@ namespace console_library3.Controllers
       }
     }
 
-    [HttpDelete("{BookId}")]
-    public ActionResult<Book> Delete(string catId)
+    [HttpDelete("{bookId}")]
+    public ActionResult<Book> Delete(string bookId)
     {
       try
       {
-        return Ok(_service.Delete(catId));
+        return Ok(_service.Delete(bookId));
       }
       catch (Exception e)
       {
